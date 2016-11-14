@@ -1,0 +1,36 @@
+<div class="row" ng-controller="tableNameCtrl">
+    <div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
+        <h2>{{tableNames[0].tableOwner.tableOwner}}</h2>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Table Name</td>
+                    <td width="50%">Description</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </thead>
+        <tbody>
+            <tr ng-repeat="tableName in tableNames | orderBy: 'tableName'">
+                <td>{{tableName.tableName}}</td>
+                <td><textarea ng-model="tableName.description" class="form-control"></textarea></td>
+                <td>
+                    <button class="btn btn-default" ng-click="go(tableName)">Go</button>
+                    <button class="btn btn-primary" ng-click="save(tableName)">Save</button>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        <div>
+            <div class="form-group">
+                <label>Table Name</label>
+                <input type="text" class="form-control" ng-model="newTableName.tableName"/>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <input type="text" class="form-control" ng-model="newTableName.description"/>
+            </div>
+        </div>
+        <button class="btn btn-primary pull-right" ng-click="add(newTableName)">Add</button>
+    </div>
+</div>

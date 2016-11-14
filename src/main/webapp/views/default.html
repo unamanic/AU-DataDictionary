@@ -1,0 +1,13 @@
+<div class="row" ng-controller="tableOwnerCtrl">
+    <div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
+        <table class="table table-bordered">
+            <tr ng-repeat="tableOwner in tableOwners">
+                <td>{{tableOwner.tableOwner}}</td><td> <button class="btn btn-default" ng-click="go(tableOwner)">Go</button><button class="btn btn-default" ng-click="report(tableOwner.id)">Report</button></td>
+            </tr>
+        </table>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="newTableOwner" />
+        </div>
+        <button class="btn btn-primary" ng-click="add()">Add</button>
+    </div>
+</div>

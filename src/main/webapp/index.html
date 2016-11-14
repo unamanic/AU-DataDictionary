@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="lib/jquery/jquery.js"></script>
+        <script type="text/javascript" src="lib/angular.js/angular.js"></script>
+        <script type="text/javascript" src="lib/angular.js/angular-route.js"></script>
+        <script type="text/javascript" src="lib/angular.js/angular-filter.js"></script>
+        <script type="text/javascript" src="lib/angular.js/angular.js"></script>
+        <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
+        <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.css">
+
+        <script type="text/javascript" src="js/app.js"></script>
+        
+        <script type="text/javascript" src="js/controllers/tableOwnerCtrl.js"></script>
+        <script type="text/javascript" src="js/services/tableOwnerService.js"></script>
+
+        <script type="text/javascript" src="js/controllers/tableNameCtrl.js"></script>
+        <script type="text/javascript" src="js/services/tableNameService.js"></script>
+
+        <script type="text/javascript" src="js/controllers/columnNameCtrl.js"></script>
+        <script type="text/javascript" src="js/services/columnNameService.js"></script>
+        
+        <script type="text/javascript" src="js/controllers/reportCtrl.js"></script>
+    </head>
+    <body ng-controller="defaultCtrl" class="container-fluid">
+    <ng-view></ng-view>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<div class="row" ng-controller="reportCtrl">
+    <div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
+        <h2>{{columnNames[0].tableName.tableOwner.tableOwner}}</h2>
+        <div ng-repeat="(tableName, tableColumnNames) in columnNames | groupBy: 'tableName.tableName' | toArray:true | orderBy: 'tableName'">
+            <h3>{{tableColumnNames[0].tableName.tableName}}</h3>
+            <p>{{tableColumnNames[0].tableName.description}}</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Table Name</th>
+                        <th>Type</th>
+                        <th>Nullable</th>
+                        <th width="50%">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="columnName in tableColumnNames| orderBy: 'id'">
+                            <td>{{columnName.columnName}}</td>
+                            <td>{{columnName.columnType}}</td>
+                            <td>{{columnName.canNull}}</td>
+                            <td>{{columnName.description}}</td>
+
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</div>
